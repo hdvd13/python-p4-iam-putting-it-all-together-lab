@@ -67,8 +67,7 @@ class TestRecipe:
             recipe = Recipe(
                 title="Generic Ham",
                 instructions="idk lol")
-
+       
             with pytest.raises(IntegrityError):
                 db.session.add(recipe)
                 db.session.commit()
-
